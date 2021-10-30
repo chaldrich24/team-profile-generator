@@ -1,0 +1,14 @@
+header {
+    padding: 50px;
+}
+
+header h1 {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.emp-container {
+    width: 75%;
+    margin: 30px auto ;
+}

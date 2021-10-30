@@ -1,3 +1,45 @@
+const generateEmployees = (employees) => {
+    if (employees.length === 0) {
+        return '';
+    }
+
+    for (i=0; i < employees.length; i++) {
+        const emp = employees[i];
+
+        if (emp.getRole() === 'Engineer') {
+            return `
+            <div class="card mx-2 mt-2" style="width: 18rem;">
+                <div class="card-body">
+                    <h2 class="card-title">${emp.name}</h5>
+                        <h3 class="card-subtitle mb-2 text-muted">${emp.getRole()}</h6>
+                            <p class="card-text">${emp.getId()}</p>
+                            <p class="card-text">Email: ${emp.email}</p>
+                            <p class="card-text">Github: ${emp.github}</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+            `
+        }
+        else if (emp.getRole() === 'Intern') {
+            return `
+            <div class="card mx-2 mt-2" style="width: 18rem;">
+                <div class="card-body">
+                    <h2 class="card-title">${emp.name}</h5>
+                        <h3 class="card-subtitle mb-2 text-muted">${emp.getRole()}</h6>
+                            <p class="card-text">${emp.getId()}</p>
+                            <p class="card-text">Email: ${emp.email}</p>
+                            <p class="card-text">School: ${emp.school}</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+            `
+        }
+    }
+}
+
+
 const page = (manager, engineers, interns) => {
     return `
     <!DOCTYPE html>
@@ -21,15 +63,17 @@ const page = (manager, engineers, interns) => {
         <section class='d-flex justify-content-center flex-wrap emp-container'>
             <div class="card mx-2 mt-2" style="width: 18rem;">
                 <div class="card-body">
-                    <h2 class="card-title">Card title</h5>
-                        <h3 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">ID: 1</p>
-                            <p class="card-text">Email</p>
-                            <p class="card-text">Office</p>
+                    <h2 class="card-title">${manager.name}</h5>
+                        <h3 class="card-subtitle mb-2 text-muted">${manager.getRole()}</h6>
+                            <p class="card-text">${manager.getId()}</p>
+                            <p class="card-text">Email: ${manager.email}</p>
+                            <p class="card-text">Office Number: ${manager.officeNumber}</p>
                             <a href="#" class="card-link">Card link</a>
                             <a href="#" class="card-link">Another link</a>
                 </div>
             </div>
+            ${generateEmployees(engineers)}
+            ${generateEmployees(interns)}
         </section>
     </body>
 

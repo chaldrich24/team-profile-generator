@@ -142,6 +142,14 @@ class Profile {
                 console.log('File created!');
             }
         });
+        fs.copyFile('./src/style.css','./dist/style.css',err => {
+            if (err) {
+                throw err;
+            }
+            else {
+                console.log('File created!');
+            }
+        });
     }
 }
 
