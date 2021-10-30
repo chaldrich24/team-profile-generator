@@ -13,8 +13,20 @@ const generateEmployees = (employees) => {
                     <h2 class="card-title">${emp.name}</h5>
                         <h3 class="card-subtitle mb-2 text-muted">${emp.getRole()}</h6>
                             <p class="card-text">${emp.getId()}</p>
-                            <p class="card-text">Email: ${emp.email}</p>
-                            <p class="card-text">Github: ${emp.github}</p>
+                            <p class="card-text">Email: 
+                                <span>
+                                    <a href='mailto:${emp.email}'>
+                                        ${emp.email}
+                                    </a>
+                                </span>
+                            </p>
+                            <p class="card-text">Github: 
+                                <span>
+                                    <a href='https://github.com/${emp.github}' target='_blank'>
+                                        ${emp.github}
+                                    </a>
+                                </span>
+                            </p>
                             <a href="#" class="card-link">Card link</a>
                             <a href="#" class="card-link">Another link</a>
                 </div>
@@ -28,7 +40,13 @@ const generateEmployees = (employees) => {
                     <h2 class="card-title">${emp.name}</h5>
                         <h3 class="card-subtitle mb-2 text-muted">${emp.getRole()}</h6>
                             <p class="card-text">${emp.getId()}</p>
-                            <p class="card-text">Email: ${emp.email}</p>
+                            <p class="card-text">Email: 
+                                <span>
+                                    <a href='mailto:${emp.email}'>
+                                        ${emp.email}
+                                    </a>
+                                </span>
+                            </p>
                             <p class="card-text">School: ${emp.school}</p>
                             <a href="#" class="card-link">Card link</a>
                             <a href="#" class="card-link">Another link</a>
@@ -66,7 +84,13 @@ const page = (manager, engineers, interns) => {
                     <h2 class="card-title">${manager.name}</h5>
                         <h3 class="card-subtitle mb-2 text-muted">${manager.getRole()}</h6>
                             <p class="card-text">${manager.getId()}</p>
-                            <p class="card-text">Email: ${manager.email}</p>
+                            <p class="card-text">Email: 
+                                <span>
+                                    <a href='mailto:${manager.email}'>
+                                        ${manager.email}
+                                    </a>
+                                </span>
+                            </p>
                             <p class="card-text">Office Number: ${manager.officeNumber}</p>
                             <a href="#" class="card-link">Card link</a>
                             <a href="#" class="card-link">Another link</a>
