@@ -10,25 +10,23 @@ const generateEmployees = (employees) => {
             return `
             <div class="card mx-2 mt-2" style="width: 18rem;">
                 <div class="card-body">
-                    <h2 class="card-title">${emp.name}</h5>
+                    <h2 class="card-title">${emp.getName()}</h5>
                         <h3 class="card-subtitle mb-2 text-muted">${emp.getRole()}</h6>
                             <p class="card-text">${emp.getId()}</p>
                             <p class="card-text">Email: 
                                 <span>
-                                    <a href='mailto:${emp.email}'>
-                                        ${emp.email}
+                                    <a href='mailto:${emp.getEmail()}'>
+                                        ${emp.getEmail()}
                                     </a>
                                 </span>
                             </p>
                             <p class="card-text">Github: 
                                 <span>
-                                    <a href='https://github.com/${emp.github}' target='_blank'>
-                                        ${emp.github}
+                                    <a href='https://github.com/${emp.getGithub()}' target='_blank'>
+                                        ${emp.getGithub()}
                                     </a>
                                 </span>
                             </p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
                 </div>
             </div>
             `
@@ -37,19 +35,17 @@ const generateEmployees = (employees) => {
             return `
             <div class="card mx-2 mt-2" style="width: 18rem;">
                 <div class="card-body">
-                    <h2 class="card-title">${emp.name}</h5>
+                    <h2 class="card-title">${emp.getName()}</h5>
                         <h3 class="card-subtitle mb-2 text-muted">${emp.getRole()}</h6>
                             <p class="card-text">${emp.getId()}</p>
                             <p class="card-text">Email: 
                                 <span>
-                                    <a href='mailto:${emp.email}'>
-                                        ${emp.email}
+                                    <a href='mailto:${emp.getEmail()}'>
+                                        ${emp.getEmail()}
                                     </a>
                                 </span>
                             </p>
-                            <p class="card-text">School: ${emp.school}</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                            <p class="card-text">School: ${emp.getSchool()}</p
                 </div>
             </div>
             `
@@ -81,19 +77,17 @@ const page = (manager, engineers, interns) => {
         <section class='d-flex justify-content-center flex-wrap emp-container'>
             <div class="card mx-2 mt-2" style="width: 18rem;">
                 <div class="card-body">
-                    <h2 class="card-title">${manager.name}</h5>
+                    <h2 class="card-title">${manager.getName()}</h5>
                         <h3 class="card-subtitle mb-2 text-muted">${manager.getRole()}</h6>
                             <p class="card-text">${manager.getId()}</p>
                             <p class="card-text">Email: 
                                 <span>
-                                    <a href='mailto:${manager.email}'>
-                                        ${manager.email}
+                                    <a href='mailto:${manager.getEmail()}'>
+                                        ${manager.getEmail()}
                                     </a>
                                 </span>
                             </p>
                             <p class="card-text">Office Number: ${manager.officeNumber}</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
                 </div>
             </div>
             ${generateEmployees(engineers)}
