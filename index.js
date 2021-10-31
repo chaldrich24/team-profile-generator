@@ -12,7 +12,7 @@ class Profile {
         this.interns = [];
     }
 
-    getManager() {
+    promptUser() {
         inquirer.prompt([
             {
                 type: 'input',
@@ -249,4 +249,4 @@ class Profile {
     }
 }
 
-new Profile().getManager();
+new Profile().promptUser();
