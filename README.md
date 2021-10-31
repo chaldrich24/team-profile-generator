@@ -1,7 +1,7 @@
 # Team Profile Generator
 
 ## Description
-This project generates a webpage that lists out a team based on user input in the command line.
+This project generates a webpage that lists out a team based on user input in the command line. The application was developed using the test-driven development approach along with object oriented programming with each employee created with user input becoming an object.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -20,9 +20,6 @@ Jest was used for testing the objects created in 'lib' folder. Use 'npm test' co
 
 ## Questions
 If you have any questions or to see other projects I've done, view my GitHub page here: https://github.com/chaldrich24.
-
-## License
-There is no license for this project.
 
 ## Links / Screenshots
 Here is a screen recording of how to use the application: https://watch.screencastify.com/v/lrPhHnuMQUQFUK7b26so.
