@@ -5,6 +5,7 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+// Object that will hold the user input
 class Profile {
     constructor() {
         this.manager;
@@ -231,6 +232,8 @@ class Profile {
             });
         }
     }
+
+    // function to generate the html page
     generatePage() {
         const page = generateFile(this.manager, this.engineers, this.interns);
         fs.writeFile('./dist/index.html', page, err => {

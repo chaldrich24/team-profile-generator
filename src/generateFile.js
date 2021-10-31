@@ -1,3 +1,4 @@
+// loops through engineers and interns arrays
 const generateEmployees = (employees) => {
     if (employees.length === 0) {
         return '';
@@ -53,7 +54,7 @@ const generateEmployees = (employees) => {
     }
 }
 
-
+// returns HTML skeleton with user inputted data
 const page = (manager, engineers, interns) => {
     return `
     <!DOCTYPE html>
